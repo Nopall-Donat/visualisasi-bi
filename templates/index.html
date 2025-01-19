@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Data Stunting</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visualisasi Data Stunting</h1>
+            <h2>Total Persentase Stunting <span id="selected-year">2023</span></h2>
+        </header>
+        
+        <div class="summary-container">
+            <div class="summary-card" id="highest-card">
+                <h3>Total Persentase Stunting Tertinggi</h3>
+                <p id="highest-region"></p>
+                <p id="highest-value"></p>
+            </div>
+            <div class="summary-card" id="lowest-card">
+                <h3>Total Persentase Stunting Terendah</h3>
+                <p id="lowest-region"></p>
+                <p id="lowest-value"></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="updateSummary('2021')">2021</button>
+            <button onclick="updateSummary('2022')">2022</button>
+            <button onclick="updateSummary('2023')">2023</button>
+        </div>
+
+        <canvas id="linechart"></canvas>
+        <div class="controls">
+            <button onclick="updateLineChart('2021')">Tampilkan 2021</button>
+            <button onclick="updateLineChart('2022')">Tampilkan 2022</button>
+            <button onclick="updateLineChart('2023')">Tampilkan 2023</button>
+            <button onclick="updateLineChart('all')">Tampilkan Semua</button>
+        </div>
+    </div>
+    <script src="static/js/chart.js"></script>
+</body>
+</html>
